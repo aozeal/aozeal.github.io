@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+<!--    <meta name="viewport" content="width=320, minimum-scale=0.5, user-scalable=no" /> -->
+    <title>コンビニ応答</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="convenience_response.css">
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/pepper-grinder/jquery-ui.css">
+        
+</head>
+	<body>
+    <!-- TODO: Please edit here -->
+    <div id="container" style="padding:0px;">
+        <div class="header left-character-style-1">これでお願いします</div>
+
+        <div class="item_frame" id="bag_frame">
+            <div class="left_text left-character-style-1">
+                レジ袋
+            </div>
+            <div class="center_img">
+                <img class="icon_img" src="img/bag.png">
+            </div>
+            <div class="right_text noneed-character-style" id="bag_text">
+                不要
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+        
+        <div class="item_frame " id="hashi_frame">
+            <div class="left_text left-character-style-1">
+                はし・<BR>スプーン
+            </div>
+            <div class="center_img">
+                <img class="icon_img" src="img/hashi.png">
+            </div>
+            <div class="right_text noneed-character-style" id="hashi_text">
+                不要
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+        
+        <div class="item_frame" id="microwave_frame">
+            <div class="left_text left-character-style-1">
+                あたため
+            </div>
+            <div class="center_img">
+                <img class="icon_img" src="img/microwave.png">
+            </div>
+            <div class="right_text noneed-character-style" id="microwave_text">
+                不要
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+        
+        <div class="item_frame" id="point_card_frame">
+            <div class="left_text left-character-style-1">
+                ポイント<BR>カード
+            </div>
+            <div class="center_img">
+                <img class="icon_img" src="img/point_card.png">
+            </div>
+            <div class="right_text noneed-character-style" id="point_card_text">
+                なし
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="item_frame" id="payment_frame">
+            <div class="payment_left_img">
+                <img class="payment_icon_img" src="img/money.png" id="payment_icon">
+            </div>
+            <div class="payment_right_text">
+                <div class="payment_title">支払い方法</div>
+                <div class="payment_character" id="payment_text">現金</div>
+            </div>
+        </div>
+
+        <div class="quarter_frame"></div>
+
+        <div class="half_frame">
+            <img src="img/rotate.png" id="rotate_img">
+        </div> <!-- footer -->
+        <div class="quarter_frame"></div>
+
+        <div id="payment-dialog" title="支払い方法を選んでください" style="display:none;">
+          <p><a href="" onclick="change_payment_status(0); $('#payment-dialog').dialog('close');return false;">現金</a></p>
+          <p><a href="" onclick="change_payment_status(1); $('#payment-dialog').dialog('close');return false;">クレジットカード</a></p>
+          <p><a href="" onclick="change_payment_status(2); $('#payment-dialog').dialog('close');return false;">交通系電子マネー</a></p>
+          <p><a href="" onclick="change_payment_status(3); $('#payment-dialog').dialog('close');return false;">楽天Edy</a></p>
+          <p><a href="" onclick="change_payment_status(4); $('#payment-dialog').dialog('close');return false;">WAON</a></p>
+          <p><a href="" onclick="change_payment_status(5); $('#payment-dialog').dialog('close');return false;">nanaco</a></p>
+          <p><a href="" onclick="change_payment_status(6); $('#payment-dialog').dialog('close');return false;">iD</a></p>
+          <p><a href="" onclick="change_payment_status(7); $('#payment-dialog').dialog('close');return false;">QuicPay</a></p>
+          <p><a href="" onclick="change_payment_status(8); $('#payment-dialog').dialog('close');return false;">PayPay</a></p>
+          <p><a href="" onclick="change_payment_status(9); $('#payment-dialog').dialog('close');return false;">LINE Pay</a></p>
+          <p><a href="" onclick="change_payment_status(10); $('#payment-dialog').dialog('close');return false;">d払い</a></p>
+          <p><a href="" onclick="change_payment_status(11); $('#payment-dialog').dialog('close');return false;">auPAY</a></p>
+          <p><a href="" onclick="change_payment_status(12); $('#payment-dialog').dialog('close');return false;">その他</a></p>
+
+        </div>
+
+    </div>
+
+    
+    <script src="convenience_response.js"></script>
+
+
+	</body>
+
+</html>
